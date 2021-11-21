@@ -1,0 +1,41 @@
+<main class="form-signin">
+     <form>
+          <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+
+          <div class="form-floating">
+               <input
+                    type="text"
+                    class="form-control"
+                    name="username"
+                    #uName="ngModel"
+                    [(ngModel)]="username"
+                    minlength="2"
+                    placeholder="username" required>
+               <label for="floatingInput">Username</label>
+          </div>
+          <div class="form-floating">
+               <input
+                    type="password"
+                    class="form-control"
+                    name="password"
+                    #uPassword="ngModel"
+                    [(ngModel)]="password"
+                    minlength="10"
+                    placeholder="Password"
+                    required>
+               <label for="floatingPassword">Password</label>
+          </div>
+
+          <button class="w-100 btn btn-lg btn-primary" type="button"
+               [disabled]="uName.invalid || uPassword.invalid || loading"
+               (click)="login()">
+               Sign in</button>
+     </form>
+
+     <div *ngIf="!!loginState.message" class="alert" role="alert" [ngClass]="{
+          'alert-success': loginState.isLoggedIn,
+          'alert-danger': !loginState.isLoggedIn
+          }">
+          {{loginState.message}}
+     </div>
+</main>

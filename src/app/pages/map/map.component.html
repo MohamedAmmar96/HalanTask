@@ -1,0 +1,13 @@
+ <div id="map" [style.height]="screenHeight+'px'"></div>
+<div *ngIf="showPopup" id="popup">
+     <h2 class="popupTitle">أضف بيانات المنطقة</h2>
+     <div class="nameOfZone">
+          <label for="zoneLabel">إسم المنطقة</label>
+          <input id="zoneLabel" #zLabel="ngModel" type="text" name="label" [(ngModel)]="textInput">
+     </div>
+     <div class="colorOfZone">
+          <label for="Color">إختر اللون</label>
+          <input type="color" id="Color" #zColor="ngModel" name="color" [(ngModel)]="colorInput">
+     </div>
+     <button class="add" id="add" type="button" (click)="addZone()">أضف منطقة</button>
+</div>

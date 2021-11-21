@@ -1,0 +1,111 @@
+@font-face {
+  font-family: TajawalRegular;
+  src: url(./assets/fonts/Tajawal-Regular.ttf);
+}
+@font-face {
+  font-family: TajawalMedium;
+  src: url(./assets/fonts/Tajawal-Medium.ttf);
+}
+@font-face {
+  font-family: TajawalBold;
+  src: url(./assets/fonts/Tajawal-Bold.ttf);
+}
+@font-face {
+  font-family: TajawalExtraBold;
+  src: url(./assets/fonts/Tajawal-ExtraBold.ttf);
+}
+#map {
+  height: 1000px;
+  width: 100%;
+}
+/* Optional: Makes the sample page fill the window. */
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#vertices {
+  width: 700px;
+  height: 40px;
+}
+#back {
+  width: 200px;
+  height: 200px;
+}
+.delete-menu {
+  position: absolute;
+  background: white;
+  padding: 3px;
+  color: #666;
+  font-weight: bold;
+  border: 1px solid #999;
+  font-family: sans-serif;
+  font-size: 12px;
+  box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.3);
+  margin-top: -10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.delete-menu:hover {
+  background: #eee;
+}
+
+#popup {
+  direction: rtl;
+  background-color: #fff;
+  border-top: 5px solid #000;
+  padding: 0.75rem 1rem;
+  width: 400px;
+  /* height: 80px; */
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+.popupTitle {
+  color: #000;
+  font-size: 22px;
+  margin: 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #aaa;
+  font-family: TajawalBold;
+}
+.nameOfZone,
+.colorOfZone {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+.nameOfZone label,
+.colorOfZone label {
+  width: 30%;
+  font-family: TajawalMedium;
+}
+.nameOfZone input,
+.colorOfZone input {
+  width: 70%;
+  height: 35px;
+  padding: 0.25rem 0.5rem;
+  font-family: TajawalMedium;
+  outline: none;
+  border: 1px solid #ccc;
+  /* background-color: #eee; */
+  background: linear-gradient(to bottom, #ccc, #fff, #fff, #ccc);
+}
+.add {
+  width: 100%;
+  height: 35px;
+  font-family: TajawalBold;
+  color: #fff;
+  font-size: 16px;
+  margin-top: 0.5rem;
+  border: none;
+  outline: none;
+  background: linear-gradient(to right, rgb(23, 141, 236), rgb(17, 3, 100));
+  cursor: pointer;
+}
